@@ -1,0 +1,11 @@
+
+//default - mobile first
+
+body.search {
+
+  > main {
+    // --test: none;
+    flex-flow: column;
+  }
+
+}

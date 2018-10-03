@@ -1,0 +1,22 @@
+title: Search
+@extends:
+    type: article
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        header.search:
+          type: tab
+          title: ✴ Search
+          icon: folder
+          text: Enter details for this person
+
+          fields:
+
+            .notes:
+              type: textarea
+              label: Notes
+              help: Notes about this plugin's configuration
+              size: medium

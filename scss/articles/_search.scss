@@ -1,0 +1,19 @@
+// default style for an article
+// start with a single column grid
+// top children have named grid areas
+
+article.search {
+
+  // --article-color: var(--color-fg);
+  // --article-bg: var(--color-bg);
+  //
+  // --article-hover-color: var(--color-bg);
+  // --article-hover-bg: var(--color-fg);
+
+}
+article.excerpt.search {
+  margin-bottom: 1em;
+  header a {
+    display:inline;
+  }
+}

@@ -1,0 +1,22 @@
+{% extends 'default.html.twig' %}
+{% block body_template_classes %}{{ parent() }} collection search{% endblock body_template_classes %}
+
+{% block content %}
+    {{ parent() }}
+
+    {% include 'search/tntsearch.html.twig' with { in_page: true }%}
+
+    {% block list %}
+
+    {% for article in page.collection %}
+      {% if not (article.url == page.url) %}
+      {% include "_articles/article-excerpt.html.twig" with { 'article': article } %}
+
+      {% endif %}
+
+    {% endfor %}
+    {% endblock list %}
+
+    {{ block('pagination') }}
+
+  {% endblock content %}
