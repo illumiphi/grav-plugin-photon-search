@@ -86,13 +86,13 @@ class PhotonSearchPlugin extends Plugin
         // styles
         if ($this->config->get('plugins.photon-search.built_in_css')) {
           $css = 'plugin://photon-search/assets/search.css';
-          $assets->addCss($css);
+          $assets->addCss($css, 100, false, 'photon-plugins' );
         }
 
         // scripts
         if ($this->config->get('plugins.photon-search.built_in_js')) {
           $js = 'plugin://photon-search/assets/search.js';
-          $assets->addJs($js);
+          $assets->addJs($js, 100, false, 'defer', 'photon-plugins' );
         }
 
 
