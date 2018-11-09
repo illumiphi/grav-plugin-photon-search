@@ -1,13 +1,10 @@
 @charset "UTF-8";
 /* photon ✴ project Components and Templates */
 /* articles/project *****************************/
-article.excerpt.search {
-  margin-bottom: 1em; }
-  article.excerpt.search header a {
-    display: inline; }
+article.excerpt.search { margin-bottom: 1em; }
+article.excerpt.search header a { display: inline; }
 
 /* templates/project *****************************/
-body.search > main {
-  flex-flow: column; }
+body.search > main { flex-flow: column; }
 
 /*# sourceMappingURL=search.css.map */
