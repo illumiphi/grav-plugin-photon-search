@@ -14,16 +14,16 @@
   {% for key, val in tntsearch_results.hits %}
     <article class="excerpt search" data-url="{{ val.link }}">
       <header>
-        <h1 >
+        <h1>
           <a href="{{ base_url ~ val.link }}">{{ val.title }}</a>
         </h1>
         {% if config.get('plugins.tntsearch.display_route') %}
           <h2>{{ val.link }}</h2>
         {% endif %}
       </header>
-      <main>
+      <div class="content">
         <p>{{ val.content }}</p>
-      </main>
+      </div>
     </article>
 
   {% endfor %}
