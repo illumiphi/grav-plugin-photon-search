@@ -1,5 +1,10 @@
-{% extends 'default.html.twig' %}
-{% block body_template_classes %}{{ parent() }} collection search{% endblock body_template_classes %}
+{% extends 'article.html.twig' %}
+{% set type = "search" %}
+{% block template %}
+{{ parent() }}
+<!-- user/plugins/photon-{{ type }}/templates/{{ type }}.html.twig -->
+{% endblock %}
+{% block body_template_classes %}{{ parent() }} {{ type }}{% endblock body_template_classes %}
 
 {% block content %}
   {{ parent() }}
