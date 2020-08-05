@@ -7,12 +7,12 @@
 {% block body_template_classes %}{{ parent() }} {{ type }}{% endblock body_template_classes %}
 
 {% block content %}
-  {{ parent() }}
+{{ parent() }}
+{% include 'search/tntsearch.html.twig' 
+      with { in_page: true }%}
 
-  {% include 'search/tntsearch.html.twig' with { in_page: true }%}
-
-  {% block list %}
-  {# % include '_sections/nav-loop.html.twig' with { 'collection' :  pages.children }  % #}
-  {% endblock list %}
+{% block list %}
+{# % include '_sections/nav-loop.html.twig' with { 'collection' :  pages.children }  % #}
+{% endblock list %}
 
 {% endblock content %}
