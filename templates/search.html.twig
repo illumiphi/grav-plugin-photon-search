@@ -1,7 +1,10 @@
 {% extends 'article.html.twig' %}
+{% set type = 'search' %}
 {% block template %}
 {{ parent() }}
-<!-- user/plugins/photon-search/templates/search.html.twig -->
+{% if config.system.debugger.enabled %}
+<!-- user/plugins/photon-{{ type }}/templates/{{ type }}.html.twig -->
+{% endif %}
 {% endblock %}
 {% block body_template_classes %}{{ parent() }} {{ type }}{% endblock body_template_classes %}
 
