@@ -81,7 +81,7 @@ class PhotonSearchPlugin extends Plugin
 
       // styles
       $css = 'plugin://photon-search/assets/search.css';
-      $assets->addCss($css, 100, false, 'photon-plugins' );
+      $assets->addCss($css, 100, 'pipeline', 'photon-plugins' );
       
       // only load the vars if this datatype page
       if ($page->template() == 'search')
