@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../scss/search.scss","../scss/articles/_search.scss","../scss/templates/_search.scss"],"names":[],"mappings":";AAAA;AAIA;ACSA;EACE;;AACA;EACE;;;ADTJ;AEFE;EAEE","file":"search.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/search.scss","../scss/articles/_search.scss","../scss/templates/_search.scss","../scss/templates/_taxonomy.scss"],"names":[],"mappings":";AAAA;AAIA;ACSA;EACE;;AACA;EACE;;;ADTJ;AEFE;EAEE;;;ACDA;EACE","file":"search.css"}

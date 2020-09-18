@@ -13,4 +13,8 @@ body.search > main {
   flex-flow: column;
 }
 
+body.taxonomy > main > article {
+  display: block;
+}
+
 /*# sourceMappingURL=search.css.map */
