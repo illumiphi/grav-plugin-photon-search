@@ -74,9 +74,8 @@ class PhotonSearchPlugin extends Plugin
     {
       // setup
       $page = 			$this->grav['page'];
-      $pages = 			$this->grav['pages'];
-      // $collection = $pages->all()->ofType('event');
-      $twig = 			$this->grav['twig'];
+      // $pages = 			$this->grav['pages'];
+      // $twig = 			$this->grav['twig'];
       $assets = 		$this->grav['assets'];
 
       // styles
@@ -86,9 +85,16 @@ class PhotonSearchPlugin extends Plugin
       // only load the vars if this datatype page
       if ($page->template() == 'search')
       {
+        $css = 'plugin://tntsearch/assets/tntsearch.css';
+        $assets->addCss($css, 100, 'pipeline', 'photon-plugins' );
+        
         // scripts
         $js = 'plugin://photon-search/assets/search.js';
         $assets->addJs($js, 100, false, 'defer', 'photon-plugins' );
+        
+        $js = 'plugin://tntsearch/assets/tntsearch.js';
+        $assets->addJs($js, 100, false, 'defer', 'photon-plugins' );
+        // $assets->addJs($js);
       }
     }
 
