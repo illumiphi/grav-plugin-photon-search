@@ -1,15 +1,14 @@
 name: photon ✴ Search
 version: 0.1.0
 description: extension of TNT search
-icon: asterisk
 author:
   name: phi ARCHITECT
   email: phi@photon-platform.net
 homepage: https://github.com/photon-platform/grav-plugin-photon-search
-demo: https://photon-platform.net
-keywords: datatype, photon
+docs: https://photon-platform.github.io/grav-plugin-photon-search/
 bugs: https://github.com/photon-platform/grav-plugin-photon-search/issues
-docs: https://github.com/photon-platform/grav-plugin-photon-search/blob/develop/README.md
+keywords: datatype, photon
+icon: asterisk
 license: MIT
 
 dependencies:

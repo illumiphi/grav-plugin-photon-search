@@ -1,5 +1,5 @@
 title: Search
-@extends:
+'@extends':
     type: article
     context: blueprints://pages
 
