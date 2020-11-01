@@ -1,56 +1,138 @@
+<a href="https://photon-platform.net/">
+    <img src="https://photon-platform.net/user/images/photon-logo-banner.png" alt="photon" title="photon" align="right" height="120" />
+</a>
+
+
 # photon ✴ Search
-## DATATYPE plugin
 
-**This README.md file should be modified to describe the features, installation, configuration, and general usage of this plugin.**
+## 0.1.0
 
-The **Search** Plugin is for [Grav CMS](http://github.com/getgrav/grav). extension of TNT search
+---
 
-## Installation
 
-Installing the Search plugin can be done in one of two ways. The GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file.
+> extension of TNT search
 
-### GPM Installation (Preferred)
+- [configuration](#configuration)
+- [templates](#templates)
+- [scaffolds](#scaffolds)
+- [scss](#scss)
+- [assets](#assets)
+- [languages](#languages)
 
-The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's terminal (also called the command line).  From the root of your Grav install type:
+# configuration
+blueprints.yaml
 
-    bin/gpm install search
+fields:
+- enabled
+- built_in_css
+- built_in_js
 
-This will install the Search plugin into your `/user/plugins` directory within Grav. Its files can be found under `/your/site/grav/user/plugins/search`.
-
-### Manual Installation
-
-To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the folder to `search`. You can find these files on [GitHub](https://github.com/i-am-phi/grav-plugin-search) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
-
-You should now have all the plugin files under
-
-    /your/site/grav/user/plugins/search
-
-> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav) and the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) to operate.
-
-### Admin Plugin
-
-If you use the admin plugin, you can install directly through the admin plugin by browsing the `Plugins` tab and clicking on the `Add` button.
-
-## Configuration
-
-Before configuring this plugin, you should copy the `user/plugins/search/search.yaml` to `user/config/plugins/search.yaml` and only edit that copy.
+Before configuring this plugin, you should copy the `user/plugins/photon-search/photon-search.yaml` to `user/config/plugins/photon-search.yaml` and only edit that copy.
 
 Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
+built_in_css: true
+built_in_js: true
+
+description: Custom Text added by the **photon-search** plugin (disable plugin to remove)
 ```
 
-Note that if you use the admin plugin, a file with your configuration, and named search.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
+Note that if you use the admin plugin, a file with your configuration, and named photon-search.yaml will be saved in the `user/config/plugins/` folder once the configuration is saved in the admin.
+
+
+# blueprints
+
+```sh
+blueprints
+├── search.yaml
+└── taxonomy.yaml
+```
+
+### Taxonomy
+taxonomy.yaml
+extends: article
+fields:
+- taxonomy
+  - header.content.items
+
+### Search
+search.yaml
+extends: article
+fields:
+- header.search
+  - .notes
+
+# templates
+
+```sh
+templates
+├── _articles
+│   ├── categories.html.twig
+│   ├── tags.html.twig
+│   └── taxonomy.html.twig
+├── search
+│   ├── tntquery-ajax.html.twig
+│   └── tntsearch.html.twig
+├── categories.html.twig
+├── search-2.html.twig
+├── search.html.twig
+├── tags.html.twig
+├── taxonomy.html.twig
+└── tntquery-ajax.html.twig
+```
+
+# scss
+
+```sh
+scss
+├── articles
+│   └── _search.scss
+├── templates
+│   ├── _search.scss
+│   └── _taxonomy.scss
+└── search.scss
+```
+
+# assets
+
+```sh
+assets
+├── search.css
+├── search.css.map
+├── search.js
+├── tntsearch.css
+└── tntsearch.js
+```
+
+# languages
+
+```sh
+languages
+└── en.yaml
+```
+
+
+## Installation
+
+- all photon plugins are installed as git submodules. More on that later.
+
+
+
+## Configuration
+
 
 ## Usage
 
-**Describe how to use the plugin.**
+Select template type when creating a new page
 
 ## Credits
 
-**Did you incorporate third-party code? Want to thank somebody?**
 
 ## To Do
 
 - [ ] Future plans, if any
+
+
+copyright &copy; 2020
